@@ -1,0 +1,33 @@
+---
+---
+
+@import "main";
+
+.canvas-container { 
+    display: flex;
+    padding-top: 20px;
+    .canvas, .description {
+        width: 50%;
+    }
+    .description {
+        margin-right: 15px;
+    }
+}
+
+canvas.lattice {
+    width: 100%;
+    height: 300px;
+    outline: grey 1px solid;
+}
+
+@include media-query($on-palm) {
+    .canvas-container {
+        display: block;
+        .canvas, .description {
+            width: 100%;
+        }
+        .description {
+            margin-right: 0px;
+        }
+    }
+}

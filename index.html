@@ -1,0 +1,39 @@
+---
+layout: home
+styles:
+  - /assets/css/index.css
+scripts:
+  - /assets/js/jquery-3.5.1.slim.min.js
+  - /assets/js/index.js
+---
+<p>
+  Welcome to my website! I'm glad you found it. Here I will share the projects 
+  that I have worked on recently. There will be roughly equal parts academic, 
+  personal and professional projects. Have a look around and send me an e-mail 
+  if you want to get in touch.
+</p>
+<hr>
+<div class="canvas-container">
+  <div class="description">
+    <h2>Showcase</h2>
+    The computers that we use on a daily basis, would have been considered 
+    supercomputers not so long ago. So, what can we do with our supercomputers 
+    (besides scrolling Instagram)? Do awesome simulations! The animations you 
+    see below/on the right are calculated in real-time inside your browser. They 
+    show off some of my interests and recent projects.
+  </div>
+  <div class="canvas">
+    <canvas id="lattice" class="lattice">
+      Your browser does not support canvas.
+    </canvas>
+    <label class="caption" for="lattice">
+      A simulated lattice of uncoupled photon Bose-Einstein Condensates. For my 
+      master thesis, I worked on an experimental realization of this lattice.
+      {%- assign project = site.projects | where: 'title', 'Photon Bose-Einstein Condensate lattice' | first -%}
+      {%- assign project_content = project.content | strip_newlines -%}
+      {%- unless project_content == "" -%}
+      &nbsp;<a href="{{ project.url }}">Read more...</a>
+      {%- endunless -%}
+    </label>
+  </div>
+</div>
