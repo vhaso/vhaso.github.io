@@ -20,11 +20,12 @@
 
 title: Klaas-Jan Gorter
 email: k-j.gorter@outlook.com
+phone: "+5215513079711"
 description: >- # this means to ignore newlines until "baseurl:"
   Physicist and software developer. Not much of a web-designer, but I hope you 
   like my site.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://vhaso.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "http:kj-gorter.com" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  vhaso
 linkedin_username: klaas-jan-gorter
 
