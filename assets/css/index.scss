@@ -6,7 +6,7 @@
 .canvas-container { 
     display: flex;
     padding-top: 20px;
-    .canvas, .description {
+    .slides-container, .description {
         width: 50%;
     }
     .description {
@@ -14,16 +14,20 @@
     }
 }
 
+.canvas {
+    height: 390px;
+}
+
 canvas.lattice {
-    width: 100%;
     height: 300px;
+    width: 100%;
     outline: grey 1px solid;
 }
 
 @include media-query($on-palm) {
     .canvas-container {
         display: block;
-        .canvas, .description {
+        .slides-container, .description {
             width: 100%;
         }
         .description {

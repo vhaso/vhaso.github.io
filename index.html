@@ -2,8 +2,11 @@
 layout: home
 styles:
   - /assets/css/index.css
+  - /assets/css/slideshow.css
 scripts:
   - /assets/js/jquery-3.5.1.slim.min.js
+  - /assets/js/lattice.js
+  - /assets/js/slideshow.js
   - /assets/js/index.js
 ---
 <p>
@@ -19,21 +22,26 @@ scripts:
     The computers that we use on a daily basis, would have been considered 
     supercomputers not so long ago. So, what can we do with our supercomputers 
     (besides scrolling Instagram)? Do awesome simulations! The animations you 
-    see below/on the right are calculated in real-time inside your browser. They 
+    see below/on the right are calculated in real-time inside your browser. They
     show off some of my interests and recent projects.
   </div>
-  <div class="canvas">
-    <canvas id="lattice" class="lattice">
-      Your browser does not support canvas.
-    </canvas>
-    <label class="caption" for="lattice">
-      A simulated lattice of uncoupled photon Bose-Einstein Condensates. For my 
-      master thesis, I worked on an experimental realization of this lattice.
-      {%- assign project = site.projects | where: 'title', 'Photon Bose-Einstein Condensate lattice' | first -%}
-      {%- assign project_content = project.content | strip_newlines -%}
-      {%- unless project_content == "" -%}
-      &nbsp;<a href="{{ project.url }}">Read more...</a>
-      {%- endunless -%}
-    </label>
+  <div class="slides-container">
+    <div class="slide fade">
+      <div class="canvas">
+        <canvas id="lattice" class="lattice">
+          Your browser does not support canvas.
+        </canvas>
+        <label class="caption" for="lattice">
+          A simulated lattice of uncoupled photon Bose-Einstein Condensates. For 
+          my master thesis, I worked on an experimental realization of this 
+          lattice.
+          {%- assign project = site.projects | where: 'title', 'Photon Bose-Einstein Condensate lattice' | first -%}
+          {%- assign project_content = project.content | strip_newlines -%}
+          {%- unless project_content == "" -%}
+          &nbsp;<a href="{{ project.url }}">Read more...</a>
+          {%- endunless -%}
+        </label>
+      </div>
+    </div>
   </div>
 </div>
