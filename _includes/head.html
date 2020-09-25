@@ -10,9 +10,9 @@
     {%- include google-analytics.html -%}
   {%- endif -%}
   {% for style in page.styles %}
-  <link rel="stylesheet" href="{{ style | relative_url}}">
+  <link rel="stylesheet" href="{{ style | relative_url}}?{{ site.time | date: '%s%N' }}">
   {% endfor %}
   {% for script in page.scripts %}
-  <script src="{{script | relative_url }}"></script>
+  <script src="{{script | relative_url }}?{{ site.time | date: '%s%N' }}"></script>
   {% endfor %}
 </head>
