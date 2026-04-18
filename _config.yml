@@ -35,11 +35,9 @@ plugins:
   - jekyll-feed
 header_pages:
   - projects.md
-  - resumes.md
 collections:
   projects:
     output: true
-  resumes:
 defaults:
   - scope:
       path: ""
